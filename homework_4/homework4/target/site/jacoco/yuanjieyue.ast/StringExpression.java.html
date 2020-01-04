@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringExpression.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast</a> &gt; <span class="el_source">StringExpression.java</span></div><h1>StringExpression.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast;
+/**
+ * Repesents the a string expression.
+ * @author Yuanjie Yue
+ */
+public class StringExpression implements Expression {
+
+	private String string;
+
+	/**
+	 * Create a new string expression.
+	 * @param string value of the string attribute.
+	 */
+<span class="fc" id="L14">	public StringExpression(String string) {</span>
+<span class="fc" id="L15">		this.string = string;</span>
+<span class="fc" id="L16">	}</span>
+
+	/**
+	 * Getter of the string attribute.
+	 * @return the string
+	 */
+	public String getString() {
+<span class="fc" id="L23">		return string;</span>
+	}
+
+	/**
+	 * Setter of the string attribute.
+	 * @param string the string to be assigned to the string.
+	 */
+	public void setString(String string) {
+<span class="fc" id="L31">		this.string = string;</span>
+<span class="fc" id="L32">	}</span>
+
+	/**
+	 *
+	 * @return the text presentation of the string expression.
+	 */
+	public String textRepresentation() {
+<span class="fc" id="L39">		return string;</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L45">			return true;</span>
+		}
+<span class="fc bfc" id="L47" title="All 2 branches covered.">		if (!(o instanceof StringExpression)) {</span>
+<span class="fc" id="L48">			return false;</span>
+		}
+
+<span class="fc" id="L51">		StringExpression that = (StringExpression) o;</span>
+
+<span class="pc bpc" id="L53" title="3 of 4 branches missed.">		return getString() != null ? getString().equals(that.getString()) : that.getString() == null;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">		return getString() != null ? getString().hashCode() : 0;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L63">		return &quot;StringExpression{&quot; +</span>
+			&quot;string='&quot; + string + '\'' +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

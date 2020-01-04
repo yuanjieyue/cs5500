@@ -1,0 +1,27 @@
+
+{squid:S1450"_Remove the "reverseObserver3" field and declare it as a local variable in the relevant methods.(ïµ°´8÷ºòì-
+asquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ
+‡squid:S1450"kRemove the "hexadecimalObserverobserver5" field and declare it as a local variable in the relevant methods.(Á¦Æû8½àîì-
+‡squid:S1450"kRemove the "hexadecimalObserverobserver1" field and declare it as a local variable in the relevant methods.(¯©Ü¨8£øëì-
+\squid:S1068"@Remove this unused "hexadecimalObserverobserver5" private field.(Á¦Æû8ùô˜ì-
+lsquid:S1450"WRemove the "subject2" field and declare it as a local variable in the relevant methods.(‚Ä³¾
+\squid:S1068"@Remove this unused "hexadecimalObserverobserver3" private field.(ÌÂ”å8×¤˜ì-
+€squid:S1450"_Remove the "reverseObserver4" field and declare it as a local variable in the relevant methods.(Ñ½±‹ùÿÿÿÿ8÷ºòì-
+Usquid:S1068"4Remove this unused "reverseObserver2" private field.(¾í„­üÿÿÿÿ8—ášì-
+Psquid:S1068"4Remove this unused "reverseObserver3" private field.(ïµ°´8—ášì-
+asquid:S1068"@Remove this unused "hexadecimalObserverobserver4" private field.(şÃöŸşÿÿÿÿ8×¤˜ì-
+lsquid:S1450"WRemove the "subject1" field and declare it as a local variable in the relevant methods.(¾š´£
+Usquid:S1068"4Remove this unused "reverseObserver1" private field.(©Ë½şÿÿÿÿ8ÔÄ™ì-
+‡squid:S1450"kRemove the "hexadecimalObserverobserver3" field and declare it as a local variable in the relevant methods.(ÌÂ”å8½àîì-
+ %squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‚ëô¡şÿÿÿÿ
+Œsquid:S1450"kRemove the "hexadecimalObserverobserver4" field and declare it as a local variable in the relevant methods.(şÃöŸşÿÿÿÿ8½àîì-
+€squid:S1450"_Remove the "reverseObserver5" field and declare it as a local variable in the relevant methods.(™ÕŒÓşÿÿÿÿ8÷ºòì-
+Usquid:S1068"4Remove this unused "reverseObserver4" private field.(Ñ½±‹ùÿÿÿÿ8—ášì-
+Usquid:S1068"4Remove this unused "reverseObserver5" private field.(™ÕŒÓşÿÿÿÿ8—ášì-
+qsquid:S1450"WRemove the "subject3" field and declare it as a local variable in the relevant methods.(·¤÷µşÿÿÿÿ
+Œsquid:S1450"kRemove the "hexadecimalObserverobserver2" field and declare it as a local variable in the relevant methods.(±ø¯Ùùÿÿÿÿ8½àîì-
+€squid:S1450"_Remove the "nullStateSubject" field and declare it as a local variable in the relevant methods.(Î›†øÿÿÿÿ8÷¿íë-
+€squid:S1450"_Remove the "reverseObserver2" field and declare it as a local variable in the relevant methods.(¾í„­üÿÿÿÿ8÷ºòì-
+\squid:S1068"@Remove this unused "hexadecimalObserverobserver1" private field.(¯©Ü¨8×¤˜ì-
+€squid:S1450"_Remove the "reverseObserver1" field and declare it as a local variable in the relevant methods.(©Ë½şÿÿÿÿ8÷ºòì-
+asquid:S1068"@Remove this unused "hexadecimalObserverobserver2" private field.(±ø¯Ùùÿÿÿÿ8×¤˜ì-

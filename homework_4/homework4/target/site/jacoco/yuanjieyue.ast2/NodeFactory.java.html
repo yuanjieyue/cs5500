@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NodeFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast2</a> &gt; <span class="el_source">NodeFactory.java</span></div><h1>NodeFactory.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast2;
+
+<span class="fc" id="L3">abstract public class NodeFactory {</span>
+	/**
+	 * Create a node given its type as string and an integer.
+	 * @param type the type of the node.
+	 * @param num the integer.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, int num);
+
+	/**
+	 * Create a node given its type as string and a string.
+	 * @param type the type of the node.
+	 * @param string the string.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, String string);
+
+	/**
+	 * Create a node given its type as string and a variable.
+	 * @param type the type of the node.
+	 * @param var the variable.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, Variable var);
+
+	/**
+	 * Create a node given its type as string and an operator and two operands as expression.
+	 * @param type the type of the node.
+	 * @param operator the operator.
+	 * @param operand1 the first operand.
+	 * @param operand2 the second operand.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, Operator operator, Expression operand1, Expression
+		operand2);
+
+	/**
+	 * Create a node given its type as string and an variable and an expression.
+	 * @param type the type of the node.
+	 * @param var the variable.
+	 * @param expression the expression.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, Variable var, Expression expression);
+
+	/**
+	 * Create a node given its type as string and two statements.
+	 * @param type the type of the node.
+	 * @param sta1 the first statement.
+	 * @param sta2 the second statement.
+	 * @return the relative node.
+	 */
+	public abstract Node createNode(String type, Statement sta1, Statement sta2);
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

@@ -1,0 +1,9 @@
+
+lsquid:S1192"PDefine a constant instead of duplicating this literal "hello world 123" 4 times.(ˆÚÌæ8™Å­û-
+<squid:S2129" Remove this "String" constructor(Ë¦İ‡8‚™Øû-
+Bsquid:S2129"!Remove this "Integer" constructor(Ò‰ÛŠúÿÿÿÿ8ÆÚ¹û-
+§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‚ëô¡şÿÿÿÿ8¨Ñ÷ú-
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ8¨Ñ÷ú-
+wsquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(Ò‰ÛŠúÿÿÿÿ8ÆÚ¹û-
+tsquid:S4144"SUpdate this method so that its implementation is not identical to "add" on line 33.(œÓ¦’ûÿÿÿÿ8™Å­û-
+bsquid:S1192"FDefine a constant instead of duplicating this literal "hello" 8 times.(ÖêøÙ8¼¬¨û-

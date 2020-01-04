@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InfixExpression.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast</a> &gt; <span class="el_source">InfixExpression.java</span></div><h1>InfixExpression.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast;
+
+/**
+ * Repesents the an infix expression.
+ * @author Yuanjie Yue
+ */
+public class InfixExpression implements Expression {
+
+	private Operator operator;
+	private Expression expression1;
+	private Expression expression2;
+
+	/**
+	 * Create a new infix expression given an operator and two expression operands.
+	 * @param operator the operator.
+	 * @param expression1 the first operand.
+	 * @param expression2 the second operand.
+	 */
+<span class="fc" id="L19">	public InfixExpression(Operator operator, Expression expression1, Expression expression2) {</span>
+<span class="fc" id="L20">		this.expression1 = expression1;</span>
+<span class="fc" id="L21">		this.expression2 = expression2;</span>
+<span class="fc" id="L22">		this.operator = operator;</span>
+<span class="fc" id="L23">	}</span>
+
+	/**
+	 * Getter for the operator attribute.
+	 * @return the operator.
+	 */
+	public Operator getOperator() {
+<span class="fc" id="L30">		return operator;</span>
+	}
+
+	/**
+	 * Setter for the operator attribute.
+	 * @param operator the operator to be assigned to the operator.
+	 */
+	public void setOperator(Operator operator) {
+<span class="fc" id="L38">		this.operator = operator;</span>
+<span class="fc" id="L39">	}</span>
+
+	/**
+	 * Getter for the first expression operand.
+	 * @return the first operand expression.
+	 */
+	public Expression getExpression1() {
+<span class="fc" id="L46">		return expression1;</span>
+	}
+
+	/**
+	 * Setter for the first expression operand.
+	 * @param expression1 value to be assigned to the first expression operand.
+	 */
+	public void setExpression1(Expression expression1) {
+<span class="fc" id="L54">		this.expression1 = expression1;</span>
+<span class="fc" id="L55">	}</span>
+
+	/**
+	 * Getter for the second expression operand.
+	 * @return the second expression.
+	 */
+	public Expression getExpression2() {
+<span class="fc" id="L62">		return expression2;</span>
+	}
+
+	/**
+	 * Setter for the second expression operand.
+	 * @param expression2 the value to be assigned to the second expression operand.
+	 */
+	public void setExpression2(Expression expression2) {
+<span class="fc" id="L70">		this.expression2 = expression2;</span>
+<span class="fc" id="L71">	}</span>
+
+	/**
+	 *
+	 * @return the text representation of the infix expression.
+	 */
+	public String textRepresentation() {
+<span class="fc" id="L78">		String operand1 = expression1.textRepresentation();</span>
+<span class="fc" id="L79">		String operatorStr = operator.getOperator();</span>
+<span class="fc" id="L80">		String operand2 = expression2.textRepresentation();</span>
+
+<span class="fc" id="L82">		return operand1 + &quot; &quot; + operatorStr + &quot; &quot; + operand2;</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L87" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L88">			return true;</span>
+		}
+<span class="fc bfc" id="L90" title="All 2 branches covered.">		if (!(o instanceof InfixExpression)) {</span>
+<span class="fc" id="L91">			return false;</span>
+		}
+
+<span class="fc" id="L94">		InfixExpression that = (InfixExpression) o;</span>
+
+<span class="pc bpc" id="L96" title="3 of 6 branches missed.">		if (getOperator() != null ? !getOperator().equals(that.getOperator()) : that.getOperator() != null) {</span>
+<span class="fc" id="L97">			return false;</span>
+		}
+<span class="pc bpc" id="L99" title="3 of 6 branches missed.">		if (getExpression1() != null ? !getExpression1().equals(that.getExpression1()) : that.getExpression1() != null) {</span>
+<span class="fc" id="L100">			return false;</span>
+		}
+<span class="pc bpc" id="L102" title="3 of 4 branches missed.">		return getExpression2() != null ? getExpression2().equals(that.getExpression2()) : that.getExpression2() == null;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="pc bpc" id="L107" title="1 of 2 branches missed.">		int result = getOperator() != null ? getOperator().hashCode() : 0;</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">		result = 31 * result + (getExpression1() != null ? getExpression1().hashCode() : 0);</span>
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">		result = 31 * result + (getExpression2() != null ? getExpression2().hashCode() : 0);</span>
+<span class="fc" id="L110">		return result;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L115">		return &quot;InfixExpression{&quot; +</span>
+			&quot;operator=&quot; + operator +
+			&quot;, expression1=&quot; + expression1 +
+			&quot;, expression2=&quot; + expression2 +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

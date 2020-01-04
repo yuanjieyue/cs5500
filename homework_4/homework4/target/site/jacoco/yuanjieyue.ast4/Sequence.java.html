@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Sequence.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast4</a> &gt; <span class="el_source">Sequence.java</span></div><h1>Sequence.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast4;
+/**
+ * Repesents the an infix expression.
+ * @author Yuanjie Yue
+ */
+public class Sequence implements Statement {
+	private Statement statement1;
+	private Statement statement2;
+
+	/**
+	 * Create a sequence statement given two statements.
+	 * @param statement1 the first statement.
+	 * @param statement2 the second statement.
+	 */
+<span class="fc" id="L15">	protected Sequence(Statement statement1, Statement statement2) {</span>
+<span class="fc" id="L16">		this.statement1 = statement1;</span>
+<span class="fc" id="L17">		this.statement2 = statement2;</span>
+<span class="fc" id="L18">	}</span>
+
+	/**
+	 * Getter for the first statement attribute.
+	 * @return the first statement.
+	 */
+	public Statement getStatement1() {
+<span class="fc" id="L25">		return statement1;</span>
+	}
+
+	/**
+	 * Setter for the first statement attribute.
+	 * @param statement1 value to be assigned to the first statement.
+	 */
+	public void setStatement1(Statement statement1) {
+<span class="fc" id="L33">		this.statement1 = statement1;</span>
+<span class="fc" id="L34">	}</span>
+
+	/**
+	 * Getter for the second statement.
+	 * @return the second statement.
+	 */
+	public Statement getStatement2() {
+<span class="fc" id="L41">		return statement2;</span>
+	}
+
+	/**
+	 * Setter for the second statement attribute.
+	 * @param statement2 the value to be assigned to the second statement.
+	 */
+	public void setStatement2(Statement statement2) {
+<span class="fc" id="L49">		this.statement2 = statement2;</span>
+<span class="fc" id="L50">	}</span>
+
+	/**
+	 *
+	 * @return the text presentation of the sequence.
+	 */
+	public String textRepresentation() {
+<span class="fc" id="L57">		String part1 = statement1.textRepresentation();</span>
+<span class="fc" id="L58">		String part2 = statement2.textRepresentation();</span>
+<span class="fc" id="L59">		return part1 + &quot; &quot; + part2;</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L64" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L65">			return true;</span>
+		}
+<span class="fc bfc" id="L67" title="All 2 branches covered.">		if (!(o instanceof Sequence)) {</span>
+<span class="fc" id="L68">			return false;</span>
+		}
+
+<span class="fc" id="L71">		Sequence sequence = (Sequence) o;</span>
+
+<span class="pc bpc" id="L73" title="3 of 6 branches missed.">		if (getStatement1() != null ? !getStatement1().equals(sequence.getStatement1()) : sequence.getStatement1() != null) {</span>
+<span class="fc" id="L74">			return false;</span>
+		}
+<span class="pc bpc" id="L76" title="3 of 4 branches missed.">		return getStatement2() != null ? getStatement2().equals(sequence.getStatement2()) : sequence.getStatement2() == null;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">		int result = getStatement1() != null ? getStatement1().hashCode() : 0;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">		result = 31 * result + (getStatement2() != null ? getStatement2().hashCode() : 0);</span>
+<span class="fc" id="L83">		return result;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L88">		return &quot;Sequence{&quot; +</span>
+			&quot;statement1=&quot; + statement1 +
+			&quot;, statement2=&quot; + statement2 +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

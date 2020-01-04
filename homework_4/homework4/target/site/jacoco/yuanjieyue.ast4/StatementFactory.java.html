@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StatementFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast4</a> &gt; <span class="el_source">StatementFactory.java</span></div><h1>StatementFactory.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast4;
+
+import java.util.HashMap;
+import java.util.Map;
+
+<span class="fc" id="L6">public class StatementFactory extends NodeFactory {</span>
+<span class="fc" id="L7">	private Map&lt;Variable, Declaration&gt; map = new HashMap&lt;&gt;();</span>
+
+	public String report() {
+<span class="fc" id="L10">		StringBuilder res = new StringBuilder();</span>
+<span class="fc" id="L11">		System.out.println(&quot;Declaration: &quot; + declCnt);</span>
+<span class="fc" id="L12">		res.append(&quot;Declaration: &quot;);</span>
+<span class="fc" id="L13">		res.append(declCnt);</span>
+<span class="fc" id="L14">		res.append(&quot;\n&quot;);</span>
+<span class="fc" id="L15">		System.out.println(&quot;Assignment: &quot; + assignCnt);</span>
+<span class="fc" id="L16">		res.append(&quot;Assignment: &quot;);</span>
+<span class="fc" id="L17">		res.append(assignCnt);</span>
+<span class="fc" id="L18">		res.append(&quot;\n&quot;);</span>
+<span class="fc" id="L19">		System.out.println(&quot;Sequence: &quot; + seqCnt);</span>
+<span class="fc" id="L20">		res.append(&quot;Sequence: &quot;);</span>
+<span class="fc" id="L21">		res.append(seqCnt);</span>
+<span class="fc" id="L22">		return res.toString();</span>
+	}
+
+	@Override
+	public Statement createNode(String type, int num) {
+<span class="fc" id="L27">		return null;</span>
+	}
+
+	@Override
+	public Statement createNode(String type, String string) {
+<span class="fc" id="L32">		return null;</span>
+	}
+
+	@Override
+	public Statement createNode(String type, Variable var) {
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">		if (type == null) return null;</span>
+<span class="fc" id="L38">		Statement node = null;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		if (type.equals(&quot;Declaration&quot;)) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">			if (!map.containsKey(var)) {</span>
+<span class="fc" id="L41">				declCnt++;</span>
+<span class="fc" id="L42">				map.put(var, new Declaration(var));</span>
+			}
+<span class="fc" id="L44">			node = map.get(var);</span>
+		}
+<span class="fc" id="L46">		return node;</span>
+	}
+
+
+	@Override
+	public Statement createNode(String type, Operator operator, Expression operand1, Expression operand2) {
+<span class="fc" id="L52">		return null;</span>
+	}
+
+	@Override
+	public Statement createNode(String type, Variable var, Expression expression) {
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">		if (type == null) return null;</span>
+<span class="fc" id="L58">		Statement node = null;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if (type.equals(&quot;Assignment&quot;)) {</span>
+<span class="fc" id="L60">			assignCnt++;</span>
+<span class="fc" id="L61">			node = new Assignment(var, expression);</span>
+		}
+<span class="fc" id="L63">		return node;</span>
+	}
+
+	@Override
+	public Statement createNode(String type, Statement sta1, Statement sta2) {
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">		if (type == null) return null;</span>
+<span class="fc" id="L69">		Statement node = null;</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if (type.equals(&quot;Sequence&quot;)) {</span>
+<span class="fc" id="L71">			seqCnt++;</span>
+<span class="fc" id="L72">			node = new Sequence(sta1, sta2);</span>
+		}
+<span class="fc" id="L74">		return node;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

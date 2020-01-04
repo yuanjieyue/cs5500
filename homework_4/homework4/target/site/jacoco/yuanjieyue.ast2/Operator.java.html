@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Operator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast2</a> &gt; <span class="el_source">Operator.java</span></div><h1>Operator.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast2;
+/**
+ * Repesents the an assignment statement.
+ * @author Yuanjie Yue
+ */
+public class Operator {
+
+	public static Operator getOperator(String string) {
+<span class="fc" id="L9">		return new Operator(string);</span>
+	}
+
+	private String operator;
+
+	/**
+	 * Create an operator given an operator as a string.
+	 * @param operator the operator.
+	 */
+<span class="fc" id="L18">	protected Operator (String operator) {</span>
+<span class="fc" id="L19">		this.operator = operator;</span>
+<span class="fc" id="L20">	}</span>
+
+	/**
+	 * Getter for the operator attribute.
+	 * @return the operator as a string.
+	 */
+	public String getOperator() {
+<span class="fc" id="L27">		return operator;</span>
+	}
+
+	/**
+	 * Setter for the operator attribute.
+	 * @param operator value to be assigned to the operator.
+	 */
+	public void setOperator(String operator) {
+<span class="fc" id="L35">		this.operator = operator;</span>
+<span class="fc" id="L36">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L41">			return true;</span>
+		}
+<span class="fc bfc" id="L43" title="All 2 branches covered.">		if (!(o instanceof Operator)) {</span>
+<span class="fc" id="L44">			return false;</span>
+		}
+
+<span class="fc" id="L47">		Operator operator1 = (Operator) o;</span>
+
+<span class="pc bpc" id="L49" title="3 of 4 branches missed.">		return getOperator() != null ? getOperator().equals(operator1.getOperator()) : operator1.getOperator() == null;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">		return getOperator() != null ? getOperator().hashCode() : 0;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L59">		return &quot;Operator{&quot; +</span>
+			&quot;operator='&quot; + operator + '\'' +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

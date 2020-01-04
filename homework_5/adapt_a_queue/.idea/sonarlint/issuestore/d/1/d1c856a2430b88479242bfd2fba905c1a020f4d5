@@ -1,0 +1,6 @@
+
+tsquid:S4144"SUpdate this method so that its implementation is not identical to "add" on line 21.(œÓ¦’ûÿÿÿÿ8Ş–Úû-
+lsquid:S1192"PDefine a constant instead of duplicating this literal "hello world 123" 4 times.(ˆÚÌæ8Ş–Úû-
+§%squid:RedundantThrowsDeclarationCheck"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‚ëô¡şÿÿÿÿ8Ş–Úû-
+bsquid:S1192"FDefine a constant instead of duplicating this literal "hello" 6 times.(ÖêøÙ8Ş–Úû-
+hsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(‚ëô¡şÿÿÿÿ8Ş–Úû-

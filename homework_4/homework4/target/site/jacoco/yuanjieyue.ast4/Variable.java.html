@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Variable.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast4</a> &gt; <span class="el_source">Variable.java</span></div><h1>Variable.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast4;
+/**
+ * Repesents the a variable.
+ * @author Yuanjie Yue
+ */
+public class Variable {
+
+	public static Variable getVariable(String variable) {
+<span class="fc" id="L9">		return new Variable(variable);</span>
+	}
+
+	private String variable;
+
+	/**
+	 * Create a variable
+	 * @param variable the variable.
+	 */
+<span class="fc" id="L18">	protected Variable(String variable) {</span>
+<span class="fc" id="L19">		this.variable = variable;</span>
+<span class="fc" id="L20">	}</span>
+
+	/**
+	 * Getter for the variable attribute.
+	 * @return the variable.
+	 */
+	public String getVariable() {
+<span class="fc" id="L27">		return variable;</span>
+	}
+
+	/**
+	 * Setter for the variable attribute.
+	 * @param variable the value to be assigned to the variable.
+	 */
+	public void setVariable(String variable) {
+<span class="fc" id="L35">		this.variable = variable;</span>
+<span class="fc" id="L36">	}</span>
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L41">			return true;</span>
+		}
+<span class="fc bfc" id="L43" title="All 2 branches covered.">		if (!(o instanceof Variable)) {</span>
+<span class="fc" id="L44">			return false;</span>
+		}
+
+<span class="fc" id="L47">		Variable variable1 = (Variable) o;</span>
+
+<span class="pc bpc" id="L49" title="3 of 4 branches missed.">		return getVariable() != null ? getVariable().equals(variable1.getVariable()) : variable1.getVariable() == null;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">		return getVariable() != null ? getVariable().hashCode() : 0;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L59">		return &quot;Variable{&quot; +</span>
+			&quot;variable='&quot; + variable + '\'' +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

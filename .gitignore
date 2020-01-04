@@ -1,0 +1,5 @@
+# All text homeworks should be submitted by .pdf form, no .doc .txt .docx
+*.doc
+*.docx
+*.txt
+

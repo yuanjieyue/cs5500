@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>VariableExpression.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">homework4</a> &gt; <a href="index.source.html" class="el_package">yuanjieyue.ast2</a> &gt; <span class="el_source">VariableExpression.java</span></div><h1>VariableExpression.java</h1><pre class="source lang-java linenums">package yuanjieyue.ast2;
+/**
+ * Repesents the a variable expression.
+ * @author Yuanjie Yue
+ */
+public class VariableExpression implements Expression {
+
+	private Variable variable;
+
+
+	/**
+	 * Create a new variable expression.
+	 * @param variable the variable.
+	 */
+<span class="fc" id="L15">	public VariableExpression(Variable variable) {</span>
+<span class="fc" id="L16">		this.variable = variable;</span>
+<span class="fc" id="L17">	}</span>
+
+	/**
+	 * Getter for the attribute variable.
+	 * @return the variable.
+	 */
+	public Variable getVariable() {
+<span class="fc" id="L24">		return variable;</span>
+	}
+
+	/**
+	 * Setter for the attribute variable.
+	 * @param variable the variable.
+	 */
+	public void setVariable(Variable variable) {
+<span class="fc" id="L32">		this.variable = variable;</span>
+<span class="fc" id="L33">	}</span>
+
+	/**
+	 *
+	 * @return the text representation of the variable expression.
+	 */
+	public String textRepresentation() {
+<span class="fc" id="L40">		return variable.getVariable();</span>
+	}
+
+	@Override
+	public boolean equals(Object o) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		if (this == o) {</span>
+<span class="fc" id="L46">			return true;</span>
+		}
+<span class="fc bfc" id="L48" title="All 2 branches covered.">		if (!(o instanceof VariableExpression)) {</span>
+<span class="fc" id="L49">			return false;</span>
+		}
+
+<span class="fc" id="L52">		VariableExpression that = (VariableExpression) o;</span>
+
+<span class="fc" id="L54">		return getVariable().equals(that.getVariable());</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="fc" id="L59">		return getVariable().hashCode();</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="fc" id="L64">		return &quot;VariableExpression{&quot; +</span>
+			&quot;variable=&quot; + variable +
+			'}';
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
